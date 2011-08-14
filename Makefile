@@ -26,7 +26,7 @@ all: $(PROGS)
 	$(COMPILE) $@ $<
 
 $(PROGS): %: %.o $(COMMON)
-	$(LD) $@ $^ -llzma -larchive
+	$(LD) $@ $^ -llzma -larchive -lpthread
 
 clean:
 	rm -f *.o $(PROGS)
